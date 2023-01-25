@@ -1,0 +1,66 @@
+.mobile_nav_btn {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+
+    position: relative;
+    z-index: 999;
+    width: 40px;
+    height: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .mobile_nav_btn {
+        display: flex;
+    }
+}
+
+.mobile_nav_btn_icon {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+}
+
+.mobile_nav_btn_icon::after, .mobile_nav_btn_icon::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    transition: transform 0.15s ease-in, top 0.15s ease-in 0.15s;
+}
+
+.mobile_nav_btn_icon::before {
+    left: 0;
+    top: -10px;
+}
+
+.mobile_nav_btn_icon::after {
+    left: 0;
+    top: 10px;
+}
+
+.mobile_nav_btn_icon.active {
+    background-color: transparent;
+}
+
+.mobile_nav_btn_icon.active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.15s linear, transform 0.15s ease-in 0.15s;
+}
+
+.mobile_nav_btn_icon.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.15s linear, transform 0.15s ease-in 0.15s;
+}

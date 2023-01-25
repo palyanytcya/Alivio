@@ -1,0 +1,135 @@
+.header {
+    padding: 17px 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.header_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header_nav {
+    font-weight: 500;
+    color: #292929;
+}
+
+.header_nav ul {
+    display: flex;
+    margin-left: 172px;
+}
+
+/* header_nav li + li { margin-left: 70px } */
+.header_nav li:not(:last-child) {
+    margin-right: 70px;
+}
+
+.header_nav a {
+    transition: color .2s ease;
+}
+
+.header_nav a:hover {
+    color: #01996D;
+}
+
+.header_login {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.header_login > * + * {
+    margin-left: 35px;
+}
+
+.header_login a {
+    color: black;
+}
+
+.header_login a:hover {
+    color: #01996D;
+    transition: color .2s ease;
+}
+
+@media (max-width: 1265px) {
+    .header_nav ul {
+        margin-left: 50px;
+    }
+}
+
+
+@media (max-width: 1120px) {
+    .header_nav li:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .header_nav li:not(:last-child) {
+        margin-right: 30px;
+    }
+    .header_nav ul {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header_nav {
+        font-size: 20px;
+    }
+    .header_nav li:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 860px) {
+    .header_nav, .header_login{
+        display: none;
+    }
+    
+}
+
+.btn, a.btn {
+    /*  
+    display: inline-block;
+    height: 51px; 
+    line-height: 51px;
+    выравнивани текста в кнопке */
+
+    min-height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01996D;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 4px;
+    transition: opacity .2s ease;
+}
+
+.btn:hover, a.btn:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+.btn_big, a.btn_big {
+    min-height: 65px;
+}
+
+@media (max-width: 770px) {
+    .btn, a.btn {
+        min-height: 45px;
+        font-size: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header_login > * + * {
+        margin-left: 20px;
+    }
+
+}
